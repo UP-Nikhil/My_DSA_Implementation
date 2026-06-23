@@ -71,3 +71,4 @@ public class basic_linkedlist {
         display(a);
     }
 }
+//[4,5,1,9]
