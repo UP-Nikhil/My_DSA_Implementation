@@ -1,0 +1,190 @@
+// add(value)          -> end me element add karta hai
+
+// add(index, value)   -> given index par element insert karta hai
+
+// get(index)          -> given index ki value return karta hai
+
+// set(index, value)   -> given index ki value update karta hai
+
+// remove(index)       -> given index ka element remove karta hai
+
+// remove(Object)      -> given value ko remove karta hai
+
+// size()              -> total elements ki count return karta hai
+
+// contains(value)     -> true/false return karta hai
+
+// indexOf(value)      -> first occurrence ka index return karta hai
+
+// lastIndexOf(value)  -> last occurrence ka index return karta hai
+
+// isEmpty()           -> list empty hai to true warna false
+
+// clear()             -> saare elements delete kar deta hai
+
+// addAll(list)        -> dusri list ke saare elements add karta hai
+
+// removeAll(list)     -> dusri list ke saare matching elements remove karta hai
+
+// retainAll(list)     -> sirf common elements rakhta hai
+
+// subList(start,end)  -> list ka ek part return karta hai
+
+// toArray()           -> List ko Array me convert karta hai
+
+// Collections.sort(list)      -> ascending order me sort karta hai
+
+// Collections.reverse(list)   -> reverse kar deta hai
+
+// Collections.max(list)       -> maximum element return karta hai
+
+// Collections.min(list)       -> minimum element return karta hai
+
+// Collections.frequency(list, value) -> value kitni baar aayi hai count karta hai
+
+// Collections.binarySearch(list,key) -> sorted list me element search karta hai
+
+
+DSA / LeetCode ke liye sabse important
+
+add()
+get()
+set()
+remove()
+size()
+contains()
+indexOf()
+isEmpty()
+clear()
+
+Collections.sort()
+Collections.reverse()
+Collections.max()
+Collections.min()
+
+In 13 methods ko pakka yaad kar lo. Ye ArrayList, LinkedList aur List interface ke 90% interview questions me kaam aa jaate hain
+
+
+ // -> Ye interview aur DSA ke liye bahut important comparison hai.
+ | Feature                | ArrayList     | LinkedList         | Vector        | Stack        |
+| ---------------------- | ------------- | ------------------ | ------------- | ------------ |
+| Internal Structure     | Dynamic Array | Doubly Linked List | Dynamic Array | Vector based |
+| Thread Safe            | ❌ No          | ❌ No               | ✅ Yes         | ✅ Yes        |
+| Random Access `get(i)` | ⭐ Fast        | ❌ Slow             | ⭐ Fast        | ⭐ Fast       |
+| Insert End             | O(1)*         | O(1)               | O(1)*         | O(1)         |
+| Delete End             | O(1)          | O(1)               | O(1)          | O(1)         |
+| Insert Middle          | O(n)          | O(n)               | O(n)          | O(n)         |
+| Delete Middle          | O(n)          | O(n)               | O(n)          | O(n)         |
+| Search                 | O(n)          | O(n)               | O(n)          | O(n)         |
+| Memory                 | Less          | More               | More          | More         |
+| Use Today              | ⭐⭐⭐⭐⭐         | ⭐⭐⭐                | ⭐             | ⭐⭐⭐          |
+
+
+
+ArrayList
+ArrayList<Integer> list = new ArrayList<>();
+
+Internally:
+
+[10][20][30][40]
+Time Complexity
+add()          -> O(1)
+get()          -> O(1)
+set()          -> O(1)
+remove(index)  -> O(n)
+contains()     -> O(n)
+indexOf()      -> O(n)
+
+Best for:
+
+Random Access
+LeetCode
+DSA
+LinkedList
+LinkedList<Integer> list = new LinkedList<>();
+
+Internally:
+
+10 <-> 20 <-> 30 <-> 40
+Time Complexity
+addFirst()     -> O(1)
+addLast()      -> O(1)
+
+removeFirst()  -> O(1)
+removeLast()   -> O(1)
+
+get(i)         -> O(n)
+
+contains()     -> O(n)
+indexOf()      -> O(n)
+
+Best for:
+
+Frequent insertion/deletion at ends
+Vector
+Vector<Integer> v = new Vector<>();
+
+ArrayList jaisa hi hai.
+
+Difference:
+
+ArrayList -> Not Thread Safe
+Vector    -> Thread Safe
+Time Complexity
+add()      -> O(1)
+get()      -> O(1)
+set()      -> O(1)
+remove()   -> O(n)
+
+Aajkal almost sab jagah:
+
+ArrayList
+
+use hota hai.
+
+Stack
+Stack<Integer> st = new Stack<>();
+
+LIFO:
+
+push(10)
+push(20)
+push(30)
+
+Top -> 30
+Time Complexity
+push()     -> O(1)
+pop()      -> O(1)
+peek()     -> O(1)
+
+search()   -> O(n)
+
+contains() -> O(n)
+
+DSA me use:
+
+Balanced Parentheses
+Next Greater Element
+Monotonic Stack
+Undo Operation
+DFS
+
+Interview Shortcut
+Agar puchhe "sabse zyada use kya hota hai?"
+1. ArrayList ⭐⭐⭐⭐⭐
+2. LinkedList ⭐⭐⭐
+3. Stack ⭐⭐⭐⭐
+4. Vector ⭐
+Yaad Rakho
+ArrayList  -> Fast Access
+LinkedList -> Fast Insertion at Ends
+Stack      -> LIFO
+Vector     -> Thread Safe ArrayList
+
+Java interviews me agar koi pooche:
+
+"ArrayList ya LinkedList?"
+
+To default answer hota hai:
+
+"Agar random access zyada chahiye to ArrayList. Agar frequent insertion/deletion at beginning/end chahiye to LinkedList."

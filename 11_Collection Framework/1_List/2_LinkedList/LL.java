@@ -56,3 +56,10 @@ public class LL {
         Linkedlist();
     }
 }
+
+ // Collections.sort(list);
+// Collections.reverse(list);
+// Collections.max(list);
+// Collections.min(list);
+
+// Ye Collections class ke static methods hain.
