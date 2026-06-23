@@ -1,0 +1,234 @@
+Queue Hierarchy
+Queue (Interface)
+   |
+   +-- LinkedList
+   |
+   +-- ArrayDeque
+   |
+   +-- PriorityQueue (Min Heap)
+
+Queue Common Methods
+// offer(value)      -> rear/end me element add karta hai
+
+// add(value)        -> element add karta hai (offer preferred)
+
+// poll()            -> front element remove + return karta hai
+
+// remove()          -> front element remove + return karta hai
+
+// peek()            -> front element return karta hai
+
+// element()         -> front element return karta hai
+
+// size()            -> total elements return karta hai
+
+// contains(value)   -> true/false return karta hai
+
+// isEmpty()         -> queue empty hai ya nahi
+
+// clear()           -> saare elements delete karta hai
+
+Queue Comparison
+
+| Feature            | LinkedList Queue   | ArrayDeque             | PriorityQueue |
+| ------------------ | ------------------ | ---------------------- | ------------- |
+| Internal Structure | Doubly Linked List | Dynamic Circular Array | Heap          |
+| Thread Safe        | ❌ No               | ❌ No                   | ❌ No          |
+| FIFO               | ✅                  | ✅                      | ❌             |
+| Priority Based     | ❌                  | ❌                      | ✅             |
+| offer()            | O(1)               | O(1)                   | O(log n)      |
+| poll()             | O(1)               | O(1)                   | O(log n)      |
+| peek()             | O(1)               | O(1)                   | O(1)          |
+| Search             | O(n)               | O(n)                   | O(n)          |
+| DSA Usage          | ⭐⭐⭐                | ⭐⭐⭐⭐⭐                  | ⭐⭐⭐⭐⭐         |
+
+LinkedList Queue
+
+Queue<Integer> q = new LinkedList<>();
+
+Internally:
+
+Front -> 10 -> 20 -> 30 -> 40 <- Rear
+Important Methods
+// offer(value)   -> rear me add
+
+// poll()         -> front remove + return
+
+// peek()         -> front return
+
+// size()         -> total elements
+
+// contains()     -> element present hai ya nahi
+
+// isEmpty()      -> queue empty hai ya nahi
+
+// clear()        -> queue empty kar deta hai
+
+Time Complexity
+
+offer()      -> O(1)
+
+poll()       -> O(1)
+
+peek()       -> O(1)
+
+contains()   -> O(n)
+
+
+Best For
+BFS
+Level Order Traversal
+Graph Traversal
+
+
+ArrayDeque
+
+Deque<Integer> dq = new ArrayDeque<>();
+
+Internally:
+
+Front <-> [10][20][30][40] <-> Rear
+Important Methods
+// offerFirst(value) -> front me add
+
+// offerLast(value)  -> rear me add
+
+// pollFirst()       -> front remove
+
+// pollLast()        -> rear remove
+
+// peekFirst()       -> front value
+
+// peekLast()        -> rear value
+
+// size()            -> total elements
+
+// contains()        -> true/false
+
+// isEmpty()         -> queue empty hai ya nahi
+
+// clear()           -> saare elements delete
+
+
+Time Complexity
+
+offerFirst() -> O(1)
+
+offerLast()  -> O(1)
+
+pollFirst()  -> O(1)
+
+pollLast()   -> O(1)
+
+peekFirst()  -> O(1)
+
+peekLast()   -> O(1)
+Best For
+Queue
+Stack
+Sliding Window
+Monotonic Queue
+Deque Problems
+PriorityQueue (Min Heap)
+PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+Internally:
+
+Min Heap
+
+Example:
+
+pq.offer(50);
+pq.offer(10);
+pq.offer(30);
+
+System.out.println(pq.peek());
+
+Output:
+
+10
+Important Methods
+// offer(value)    -> heap me add
+
+// poll()          -> minimum element remove
+
+// peek()          -> minimum element return
+
+// size()          -> total elements
+
+// contains()      -> true/false
+
+// isEmpty()       -> queue empty hai ya nahi
+
+// clear()         -> saare elements delete
+Time Complexity
+offer()      -> O(log n)
+
+poll()       -> O(log n)
+
+peek()       -> O(1)
+
+contains()   -> O(n)
+Best For
+Kth Largest Element
+Top K Frequent Elements
+Merge K Sorted Lists
+Heap Problems
+PriorityQueue (Max Heap)
+
+Default Java PriorityQueue Min Heap hoti hai.
+
+Max Heap banane ke liye:
+
+PriorityQueue<Integer> pq =
+    new PriorityQueue<>(Collections.reverseOrder());
+
+Example:
+
+pq.offer(50);
+pq.offer(10);
+pq.offer(30);
+
+System.out.println(pq.peek());
+
+Output:
+
+50
+Time Complexity
+offer() -> O(log n)
+
+poll()  -> O(log n)
+
+peek()  -> O(1)
+DSA / LeetCode Priority
+1. ArrayDeque      ⭐⭐⭐⭐⭐
+2. PriorityQueue   ⭐⭐⭐⭐⭐
+3. LinkedList      ⭐⭐⭐
+Interview Shortcut
+LinkedList   -> FIFO Queue
+
+ArrayDeque   -> Best Queue + Best Stack Replacement
+
+PriorityQueue -> Heap (Min Heap by default)
+
+Max Heap -> PriorityQueue + Collections.reverseOrder()
+Sabse Important Methods Yaad Rakho
+offer()
+poll()
+peek()
+
+offerFirst()
+offerLast()
+
+pollFirst()
+pollLast()
+
+peekFirst()
+peekLast()
+
+size()
+contains()
+isEmpty()
+clear()
+
+Ye methods Queue, ArrayDeque aur PriorityQueue ke 90% DSA aur LeetCode questions me kaam aate hain.
