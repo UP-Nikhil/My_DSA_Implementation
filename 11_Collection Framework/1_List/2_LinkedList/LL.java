@@ -10,27 +10,27 @@ public class LL {
         list.add(60);
         System.out.println(list);
         
-        // contains()
+        // contains() reaturn true or false ;
         System.out.println("Contains 12 ? " + list.contains(12));
 
-        // get()
+        // get() return index value; if list empty return exception;
         System.out.println("Value at index 2 : " + list.get(2));
 
-        // set()
+        // set() insert value in anywhere using index; if index exist in linkedList;
         list.set(2, 20);
         System.out.println("After set() : " + list);
 
-        // remove value 12
+        // remove value  if exist in  liikedlist;
         list.remove(Integer.valueOf(90));
         System.out.println("After remove(90) : " + list);
 
-        // size()
+        // size() return size of linkedlist;
         System.out.println("Size : " + list.size());
 
         // indexOf()
         System.out.println("Index of 80 : " + list.indexOf(80));
 
-        // isEmpty()
+        // isEmpty() return true if list is not empty, else  false;
         System.out.println("Is Empty ? " + list.isEmpty());
 
         // Collections.sort()
@@ -41,11 +41,14 @@ public class LL {
         Collections.reverse(list);
         System.out.println("After reverse() : " + list);
 
-        // Collections.max()
+        // Collections.max() return max value;
         System.out.println("Max Element : " + Collections.max(list));
 
         // Collections.min()
         System.out.println("Min Element : " + Collections.min(list));
+
+        list.clear(); // delete all elemet in linkedlist;
+        System.out.println(list);
     }
 
     
