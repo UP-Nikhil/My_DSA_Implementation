@@ -69,8 +69,8 @@ In 13 methods ko pakka yaad kar lo. Ye ArrayList, LinkedList aur List interface 
  | Feature                | ArrayList     | LinkedList         | Vector        | Stack        |
 | ---------------------- | ------------- | ------------------ | ------------- | ------------ |
 | Internal Structure     | Dynamic Array | Doubly Linked List | Dynamic Array | Vector based |
-| Thread Safe            | ❌ No          | ❌ No               | ✅ Yes         | ✅ Yes        |
-| Random Access `get(i)` | ⭐ Fast        | ❌ Slow             | ⭐ Fast        | ⭐ Fast       |
+| Thread Safe            | ❌ No         | ❌ No             | ✅ Yes        | ✅ Yes        |
+| Random Access `get(i)` | ⭐ Fast       | ❌ Slow           | ⭐ Fast       | ⭐ Fast       |
 | Insert End             | O(1)*         | O(1)               | O(1)*         | O(1)         |
 | Delete End             | O(1)          | O(1)               | O(1)          | O(1)         |
 | Insert Middle          | O(n)          | O(n)               | O(n)          | O(n)         |
