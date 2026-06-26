@@ -1,0 +1,230 @@
+MAP (HashMap / LinkedHashMap / TreeMap)
+
+// put(key, value)           -> key-value pair add ya update karta hai
+
+// get(key)                  -> key ki value return karta hai
+
+// getOrDefault(key, value)  -> key na mile to default value return karta hai
+
+// remove(key)               -> key remove karta hai
+
+// remove(key, value)        -> key aur value match ho to remove karta hai
+
+// containsKey(key)          -> key present hai ya nahi
+
+// containsValue(value)      -> value present hai ya nahi
+
+// replace(key, value)       -> value update karta hai
+
+// putIfAbsent(key, value)   -> key nahi hai tabhi add karta hai
+
+// size()                    -> total entries return karta hai
+
+// isEmpty()                 -> map empty hai ya nahi
+
+// clear()                   -> saari entries delete karta hai
+
+// keySet()                  -> saari keys return karta hai
+
+// values()                  -> saari values return karta hai
+
+// entrySet()                -> key-value pairs return karta hai
+
+// forEach()                 -> map iterate karta hai
+
+// how to print any map without any declaration;
+  
+  for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " -> " + entry.getValue());
+   }
+
+// usidng var variabel ;
+
+  for(var e: mp.entrySet){
+    System.out.println(e.getKey()); // print map key;
+    System.out.println(e.getValue()); // print map value;
+    System.out.println(e); // print key : value;
+  }
+
+
+
+
+DSA / LeetCode ke liye sabse important
+
+put()
+get()
+containsKey()
+containsValue()
+remove()
+
+getOrDefault()  // most important in use to find Frequency;
+putIfAbsent()
+
+keySet()
+entrySet()
+
+size()
+isEmpty()
+clear()
+
+In methods ko pakka yaad kar lo.
+HashMap DSA aur interviews me sabse zyada use hota hai.
+
+--------------------------------------------------------
+
+Feature Comparison
+  
+| Feature           |  HashMap | LinkedHashMap | TreeMap |
+|---------          |----------|---------------|---------|
+| Duplicate Keys    | ❌ No    | ❌ No        | ❌ No |
+| Duplicate Values  | ✅ Yes   | ✅ Yes       | ✅ Yes |
+| Order             | ❌ No    | ✅ Insertion Order | ✅ Sorted by Key |
+| Thread Safe       | ❌ No    | ❌ No        | ❌ No |
+| Null Key          | ✅ One   | ✅ One       | ❌ No |
+| Null Value        | ✅ Yes   | ✅ Yes       | ✅ Yes |
+| Search             | ⭐ Fast | ⭐ Fast      | Medium        |
+| Internal Structure | Hash Table | Hash Table + Linked List | Red Black Tree |
+
+--------------------------------------------------------
+
+HashMap
+
+HashMap<String,Integer> map = new HashMap<>();
+
+Internally
+
+Key      Value
+
+A         10
+B         20
+C         30
+
+Order Fixed Nahi Hota
+
+Time Complexity
+
+put()           -> O(1)
+get()           -> O(1)
+remove()        -> O(1)
+containsKey()   -> O(1)
+
+Best For
+
+Fast Lookup
+Frequency Count
+LeetCode
+DSA
+
+--------------------------------------------------------
+
+LinkedHashMap
+
+LinkedHashMap<String,Integer> map = new LinkedHashMap<>();
+
+Internally
+
+A ->10
+B ->20
+C ->30
+
+Insertion Order Maintain Hota Hai
+
+Time Complexity
+
+put()           -> O(1)
+get()           -> O(1)
+remove()        -> O(1)
+
+Best For
+
+Order Maintain
+Cache
+
+--------------------------------------------------------
+
+TreeMap
+
+TreeMap<String,Integer> map = new TreeMap<>();
+
+Internally
+
+Sorted by Key
+
+A ->10
+B ->20
+C ->30
+
+Time Complexity
+
+put()           -> O(log n)
+get()           -> O(log n)
+remove()        -> O(log n)
+
+Best For
+
+Sorted Data
+Range Queries
+
+--------------------------------------------------------
+
+Interview Shortcut
+
+Agar puchhe "Sabse zyada use kaunsa hota hai?"
+
+1. HashMap ⭐⭐⭐⭐⭐
+2. LinkedHashMap ⭐⭐⭐⭐
+3. TreeMap ⭐⭐⭐
+
+--------------------------------------------------------
+
+Yaad Rakho
+
+HashMap
+→ Fast Lookup
+→ No Order
+
+LinkedHashMap
+→ Fast Lookup
+→ Insertion Order
+
+TreeMap
+→ Sorted Keys
+→ Slower than HashMap
+
+--------------------------------------------------------
+
+Java Interview Answer
+
+HashMap
+✔ Fastest
+✔ Frequency Count
+
+LinkedHashMap
+✔ Order Maintain
+
+TreeMap
+✔ Automatically Sort by Key
+
+--------------------------------------------------------
+
+LeetCode me HashMap ka Use
+
+✔ Two Sum
+✔ Frequency Count
+✔ Group Anagrams
+✔ Valid Anagram
+✔ Top K Frequent Elements
+✔ First Unique Character
+✔ Isomorphic Strings
+✔ Longest Consecutive Sequence
+
+--------------------------------------------------------
+
+Time Complexity
+
+put()            O(1)
+get()            O(1)
+remove()         O(1)
+containsKey()    O(1)
+
+(TreeMap me ye sab O(log n) hote hain.)
