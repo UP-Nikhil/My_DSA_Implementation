@@ -38,7 +38,7 @@ public class Tree_Set {
         // lower()
         System.out.println("Lower than 20 : " + set.lower(20));
 
-        // ceiling()
+        // ceiling() apne najdik k higher element ka output dega;
         System.out.println("Ceiling of 25 : " + set.ceiling(25));
 
         // floor()
