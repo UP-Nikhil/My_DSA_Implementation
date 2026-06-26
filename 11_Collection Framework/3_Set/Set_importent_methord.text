@@ -1,0 +1,249 @@
+SET (HashSet / LinkedHashSet / TreeSet)
+
+// add(value)          -> element add karta hai
+
+// remove(value)       -> given value remove karta hai
+
+// contains(value)     -> element present hai ya nahi (true/false)
+
+// size()              -> total elements ki count return karta hai
+
+// isEmpty()           -> set empty hai to true
+
+// clear()             -> saare elements delete kar deta hai
+
+// iterator()          -> iterator return karta hai
+
+// forEach()           -> har element par iterate karta hai
+
+// toArray()           -> Set ko Array me convert karta hai
+
+// addAll(set)         -> dusre set ke saare elements add karta hai
+
+// removeAll(set)      -> matching elements remove karta hai
+
+// retainAll(set)      -> sirf common elements rakhta hai
+
+// containsAll(set)    -> check karta hai ki saare elements present hain ya nahi
+
+// Collections.max(set) -> maximum element return karta hai
+
+// Collections.min(set) -> minimum element return karta hai
+
+
+
+
+DSA / LeetCode ke liye sabse important
+
+add()
+remove()
+contains()
+size()
+isEmpty()
+clear()
+
+Iterator
+for-each loop
+
+In methods ko pakka yaad kar lo.
+HashSet interview aur DSA me bahut use hota hai.
+
+
+
+
+--------------------------------------------------------
+
+Feature Comparison
+
+| Feature | HashSet | LinkedHashSet | TreeSet |
+|---------|----------|---------------|----------|
+| Duplicate | ❌ No | ❌ No | ❌ No |
+| Order | ❌ No | ✅ Insertion Order | ✅ Sorted |
+| Thread Safe | ❌ No | ❌ No | ❌ No |
+| Null | ✅ One null | ✅ One null | ❌ Not Allowed |
+| Search | ⭐ Fast | ⭐ Fast | Medium |
+| Internal Structure | Hash Table | Hash Table + Linked List | Red Black Tree |
+| Best Use | Fast Search | Maintain Order | Sorted Data |
+
+--------------------------------------------------------
+
+HashSet
+
+Set<Integer> set = new HashSet<>();
+
+Internally
+
+10
+20
+30
+40
+
+Order Fixed Nahi Hota
+
+Time Complexity
+
+add()         -> O(1)
+remove()      -> O(1)
+contains()    -> O(1)
+size()        -> O(1)
+
+Best For
+
+Fast Search
+Unique Elements
+LeetCode
+DSA
+
+--------------------------------------------------------
+
+LinkedHashSet
+
+Set<Integer> set = new LinkedHashSet<>();
+
+Internally
+
+10 → 20 → 30 → 40
+
+Insertion Order Maintain Hota Hai
+
+Time Complexity
+
+add()         -> O(1)
+remove()      -> O(1)
+contains()    -> O(1)
+
+Best For
+
+Unique Elements
+Insertion Order Maintain
+
+--------------------------------------------------------
+
+TreeSet
+
+Set<Integer> set = new TreeSet<>();
+
+Internally
+
+10
+20
+30
+40
+
+Automatically Sorted
+
+Time Complexity
+
+add()         -> O(log n)
+remove()      -> O(log n)
+contains()    -> O(log n)
+
+Best For
+
+Sorted Data
+Binary Search Tree Based Questions
+
+--------------------------------------------------------
+
+Interview Shortcut
+
+Agar puchhe "Sabse zyada use kaunsa hota hai?"
+
+1. HashSet ⭐⭐⭐⭐⭐
+2. LinkedHashSet ⭐⭐⭐⭐
+3. TreeSet ⭐⭐⭐
+
+--------------------------------------------------------
+
+Yaad Rakho
+
+HashSet
+→ Fast Search
+→ No Order
+
+LinkedHashSet
+→ Fast Search
+→ Insertion Order Maintain
+
+TreeSet
+→ Sorted Order
+→ Slower than HashSet
+
+--------------------------------------------------------
+
+Java Interview Answer
+
+HashSet
+✔ Duplicate Remove
+✔ Fast Search
+
+LinkedHashSet
+✔ Duplicate Remove
+✔ Order Maintain
+
+TreeSet
+✔ Duplicate Remove
+✔ Automatically Sort
+
+--------------------------------------------------------
+
+Common Interview Questions
+
+1. Duplicate Remove
+
+int[] arr = {1,2,2,3,3,4};
+
+Set<Integer> set = new HashSet<>();
+
+for(int x : arr){
+    set.add(x);
+}
+
+System.out.println(set);
+
+Output
+
+[1, 2, 3, 4]
+
+--------------------------------------------------------
+
+2. Iterate
+
+for(int x : set){
+    System.out.println(x);
+}
+
+--------------------------------------------------------
+
+3. Iterator
+
+Iterator<Integer> it = set.iterator();
+
+while(it.hasNext()){
+    System.out.println(it.next());
+}
+
+--------------------------------------------------------
+
+4. Convert List to Set
+
+List<Integer> list = Arrays.asList(1,2,2,3);
+
+Set<Integer> set = new HashSet<>(list);
+
+--------------------------------------------------------
+
+5. Convert Set to List
+
+List<Integer> list = new ArrayList<>(set);
+
+--------------------------------------------------------
+
+LeetCode me HashSet ka use
+
+✔ Contains Duplicate
+✔ Longest Consecutive Sequence
+✔ Happy Number
+✔ Intersection of Two Arrays
+✔ Remove Duplicates
+✔ Two Sum (HashMap ke saath)
