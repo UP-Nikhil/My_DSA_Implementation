@@ -11,7 +11,7 @@ public class Recursion {
         }
         // self work;
 
-        
+
         // recusive work;
         return n * factorial(n - 1);
     }
