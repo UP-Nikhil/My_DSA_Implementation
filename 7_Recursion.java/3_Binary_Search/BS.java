@@ -20,4 +20,4 @@ public class BS {
         int arr[] = { 1, 2, 4, 5, 8, 12, 13 };
         System.out.println(B_S(arr, 8, 0, arr.length));
     }
-}
+}  
