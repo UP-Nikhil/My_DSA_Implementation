@@ -43,7 +43,7 @@ public class base {
         a.left= c;
         a.right =d;
         // parrent b chield are e and f;
-        // b.left = e;
+        b.left = e;
         b.right = f;
 
         // display 
