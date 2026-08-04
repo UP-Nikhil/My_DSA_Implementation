@@ -1,6 +1,5 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
 public class BFS_DFS {
     static class Node {
         int val;
@@ -62,7 +61,7 @@ public class BFS_DFS {
     // using queue BFS
 
     static void BFS_Q(Node root) {
-        Queue<Node> q = new LinkedList();
+        Queue<Node> q = new LinkedList<>();
         if (root != null)
             q.add(root);
         while (q.size() > 0) {
