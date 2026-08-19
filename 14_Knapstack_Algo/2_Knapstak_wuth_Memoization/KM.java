@@ -16,6 +16,32 @@ public class KM {
         }
     }
 
+    // thoda clear version
+
+    public static int knapsackMemo(  int[] val,     int[] wt, int W, int n, int[][] dp) {
+
+        if (W == 0 || n == 0) {
+            return 0;
+        }
+
+        if (dp[n][W] != -1) {
+            return dp[n][W];
+        }
+
+        int exclude = knapsackMemo(val, wt, W, n - 1, dp);
+
+        int ans = exclude;
+
+        if (wt[n - 1] <= W) {
+
+            int include = val[n - 1]  + knapsackMemo(   val, wt, W - wt[n - 1], n - 1, dp);
+        
+            ans = Math.max(include, exclude);
+        }
+
+        return dp[n][W] = ans;
+    }
+
     public static void main(String[] args) {
         int val[] = { 20, 30, 50, 60, 100 };
         int wt[] = { 2, 3, 4, 5, 9 };
