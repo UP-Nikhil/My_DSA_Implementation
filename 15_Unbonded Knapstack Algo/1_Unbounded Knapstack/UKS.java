@@ -13,9 +13,9 @@ public class UKS {
 
             // In unbounded knapstack when we teke (inckude) the val , then don't go (n-1)
 
-            int include = val[n - 1] + UB_knapstac_Memo(val, wt, W - wt[n - 1], n, dp);
-            int exclude = UB_knapstac_Memo(val, wt, W, n - 1, dp);
-            return dp[n][W] = Math.max(include, exclude);
+            int skip = UB_knapstac_Memo(val, wt, W, n - 1, dp);
+            int take = val[n - 1] + UB_knapstac_Memo(val, wt, W - wt[n - 1], n, dp);
+            return dp[n][W] = Math.max(take, skip);
         } else {
             return dp[n][W] = UB_knapstac_Memo(val, wt, W, n - 1, dp);
         }
@@ -24,7 +24,7 @@ public class UKS {
     public static void main(String[] args) {
         int val[] = { 6, 3, 7, 25 };
         int wt[] = { 2, 2, 8, 9 };
-        int W = 9;
+        int W = 20;
         int n = val.length;
         int dp[][] = new int[n + 1][W + 1];
         for (int arr[] : dp) {
