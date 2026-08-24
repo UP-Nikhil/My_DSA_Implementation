@@ -10,9 +10,6 @@ public class GPH_M {
             {0, 1, 0, 0, 0, 0},
             {0, 0, 1, 0, 0, 0}
         };
-
-        int vertices = graph.length;
-
         for(int g[] : graph){
            System.out.println(Arrays.toString(g));
         }
