@@ -47,7 +47,7 @@ public class BFS {
     }
 
     // int
-    public boolean isCycle(int V, int[][] edges) {
+    public  static boolean isCycle(int V, int[][] edges) {
 
         // convert graph matrix into list graph
 
@@ -79,6 +79,14 @@ public class BFS {
     }
 
     public static void main(String[] args) {
+         int V = 4;
 
+        int[][] edges = {
+                {0, 1},
+                {1, 2},
+                {2, 3},
+                {3, 2}
+        };
+       System.out.println(isCycle(V, edges));
     }
 }
